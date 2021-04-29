@@ -70,7 +70,7 @@ app.get('/web/students/create',(req,res) => {
 	res.sendFile(__dirname + '//HTMLForm.html');
 });
 app.get('/web/courses/create',(req,res) => {
-	res.sendFile(__dirname + '//HTMLForm2.html');
+	res.sendFile(__dirname + '//HTMLFormm.html');
 });
 
 //read course
