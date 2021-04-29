@@ -36,7 +36,7 @@ app.get('/web/courses/create',(req,res) => {
 
 
 //create student with HTML
-app.post('/SADD',urlencodedParser,(req,res) => { 
+app.post('/web/students/create/SADD',urlencodedParser,(req,res) => { 
     const result = validateStudent(req.body);
 	if(result.error)
 	{
@@ -57,7 +57,7 @@ app.post('/SADD',urlencodedParser,(req,res) => {
 });
 
 //create course with HTML
-app.post('/CADD',urlencodedParser,(req,res) => { 
+app.post('/web/courses/creat/CADD',urlencodedParser,(req,res) => { 
     const result = validateCourse(req.body);
 	if(result.error)
 	{
