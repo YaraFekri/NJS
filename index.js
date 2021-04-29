@@ -1,6 +1,9 @@
 const Joi = require('joi');
 const express = require('express');
 const app = express();
+
+var http = require('http');
+var path = require("path");
 var bodyParser =require('body-parser');
 var urlencodedParser =bodyParser.urlencoded({extended:false})
 
@@ -22,8 +25,18 @@ const students = [
 ];
 
 
+
+app.get('/web/students/create',(req,res) => {
+	res.sendFile(__dirname + '//HTMLFormS.html');
+});
+app.get('/web/courses/create',(req,res) => {
+	res.sendFile(__dirname + '//HTMLFormC.html');
+});
+
+
+
 //create student with HTML
-app.post('/web/students/create/StudentAdd',urlencodedParser,(req,res) => { 
+app.post('/SADD',urlencodedParser,(req,res) => { 
     const result = validateStudent(req.body);
 	if(result.error)
 	{
@@ -44,7 +57,7 @@ app.post('/web/students/create/StudentAdd',urlencodedParser,(req,res) => {
 });
 
 //create course with HTML
-app.post('/web/courses/create/courseAdded',urlencodedParser,(req,res) => { 
+app.post('/CADD',urlencodedParser,(req,res) => { 
     const result = validateCourse(req.body);
 	if(result.error)
 	{
@@ -62,15 +75,6 @@ app.post('/web/courses/create/courseAdded',urlencodedParser,(req,res) => {
 	
 
 	
-});
-
-
-
-app.get('/web/students/create',(req,res) => {
-	res.sendFile(__dirname + '//HTMLFormS.html');
-});
-app.get('/web/courses/create',(req,res) => {
-	res.sendFile(__dirname + '//HTMLFormmC.html');
 });
 
 //read course
