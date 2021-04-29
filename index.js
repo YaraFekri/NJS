@@ -67,10 +67,10 @@ app.post('/web/courses/create/courseAdded',urlencodedParser,(req,res) => {
 
 
 app.get('/web/students/create',(req,res) => {
-	res.sendFile(__dirname + '//HTMLForm.html');
+	res.sendFile(__dirname + '//HTMLFormS.html');
 });
 app.get('/web/courses/create',(req,res) => {
-	res.sendFile(__dirname + '//HTMLFormm.html');
+	res.sendFile(__dirname + '//HTMLFormC.html');
 });
 
 //read course
