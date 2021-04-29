@@ -23,7 +23,7 @@ const students = [
 
 
 //create student with HTML
-app.post('/web/students/create/StudentAdded',urlencodedParser,(req,res) => { 
+app.post('/web/students/create/StudentAdd',urlencodedParser,(req,res) => { 
     const result = validateStudent(req.body);
 	if(result.error)
 	{
@@ -70,7 +70,7 @@ app.get('/web/students/create',(req,res) => {
 	res.sendFile(__dirname + '//HTMLFormS.html');
 });
 app.get('/web/courses/create',(req,res) => {
-	res.sendFile(__dirname + '//HTMLFormC.html');
+	res.sendFile(__dirname + '//HTMLFormmC.html');
 });
 
 //read course
