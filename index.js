@@ -1,6 +1,8 @@
 const Joi = require('joi');
 const express = require('express');
 const app = express();
+var bodyParser =require('body-parser');
+var urlencodedParser =bodyParser.urlencoded({extended:false})
 
 app.use(express.json());
 
